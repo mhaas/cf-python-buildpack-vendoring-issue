@@ -1,0 +1,11 @@
+applications:
+
+  - name: my-test-app
+    no-route: true
+    memory: 1G
+    disk_quota: 2G
+    path: .
+    buildpack: https://github.com/cloudfoundry/python-buildpack.git#v1.8.11
+    health-check-type: process
+    stack: cflinuxfs4
+    command: sleep infinity
